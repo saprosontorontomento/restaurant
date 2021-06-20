@@ -2,8 +2,20 @@ import React, {Component} from 'react';
 import Error from '../error';
 
 export default class ErrorBoundry extends Component {
+
+    state = {
+        error: false,
+    }
+
+    componentDidCatch() {
+        this.setState({error: true});
+    }
+
     render() {
-       
-        return 1;
+        if (this.state.error) {
+            return <Error/>
+        }
+
+        return this.props.children; // отрендерим всё что будет внутри компонента errBoundry
     }
 }
