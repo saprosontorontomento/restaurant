@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/restaurant/static/css/main.a668d18f.chunk.css",
+    "main.js": "/restaurant/static/js/main.6975b9fe.chunk.js",
+    "main.js.map": "/restaurant/static/js/main.6975b9fe.chunk.js.map",
+    "runtime-main.js": "/restaurant/static/js/runtime-main.1c7c9293.js",
+    "runtime-main.js.map": "/restaurant/static/js/runtime-main.1c7c9293.js.map",
+    "static/js/2.a60cd7d2.chunk.js": "/restaurant/static/js/2.a60cd7d2.chunk.js",
+    "static/js/2.a60cd7d2.chunk.js.map": "/restaurant/static/js/2.a60cd7d2.chunk.js.map",
+    "index.html": "/restaurant/index.html",
+    "static/css/main.a668d18f.chunk.css.map": "/restaurant/static/css/main.a668d18f.chunk.css.map",
+    "static/js/2.a60cd7d2.chunk.js.LICENSE.txt": "/restaurant/static/js/2.a60cd7d2.chunk.js.LICENSE.txt",
+    "static/media/food-bg.fd26761e.jpg": "/restaurant/static/media/food-bg.fd26761e.jpg",
+    "static/media/shopping-cart-solid.f0d47d21.svg": "/restaurant/static/media/shopping-cart-solid.f0d47d21.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1c7c9293.js",
+    "static/js/2.a60cd7d2.chunk.js",
+    "static/css/main.a668d18f.chunk.css",
+    "static/js/main.6975b9fe.chunk.js"
+  ]
+}
