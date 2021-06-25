@@ -16,33 +16,28 @@ class MenuList extends Component {
         const {RestoService} = this.props;
         RestoService.getMenuItems()
             .then(res => this.props.menuLoaded(res))
-            .catch(error => this.props.menuError())
-
-        }
+            .catch(() => this.props.menuError());
+    }
 
     render() {
         const {menuItems, loading, error, addedToCart} = this.props;
-
-        if (error) {
+        if (error){
             return <Error/>
         }
-
         if (loading) {
             return <Spinner/>
         }
+        const items = menuItems.map(menuItem => {
+                return ( <MenuListItem 
+                            key = {menuItem.id} 
+                            menuItem = {menuItem }
+                            onAddToCart = {() => addedToCart(menuItem.id)}/>
+                )
+            })
 
         return (
-            <ul className="menu__list">
-                {
-                    menuItems.map(menuItem => {
-                        return <MenuListItem 
-                                key={menuItem.id} 
-                                menuItem={menuItem}
-                                onAddToCart={() => addedToCart(menuItem.id)} />
-                    })
-                }
-            </ul>
-        )
+            <View items = {items}/> 
+            )
     }
 };
 
@@ -61,5 +56,13 @@ const mapDispatchToProps = {
     addedToCart
 };
 
+const View = ({items}) => {
+
+    return (
+        <ul className="menu__list">
+            {items}
+        </ul>
+    ) 
+}
 
 export default WithRestoService()(connect(mapStateToProps,mapDispatchToProps)(MenuList));
